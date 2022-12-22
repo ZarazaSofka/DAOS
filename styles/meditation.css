@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Ruslan+Display&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.content-container {
+  flex-flow: column nowrap;
+  background-color: #2d3540;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 2% 1%;
+}
+#prelude {
+  min-height: 80vh;
+}
+#prelude > .wrapper {
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1vw;
+  min-height: 65vh;
+  height: max-content
+  width: 80%;
+  background: linear-gradient(-45deg, #4A0004, #690308);
+}
+#prelude .wrapper .text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-grow: 1;
+  height: 35%;
+  text-align: left;
+  color: #FFCED0;
+  padding: 2vh 1vw;
+}
+#prelude .text-container h1 {
+  font-size: 200%;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Ruslan Display';
+}
+#prelude .text-container ul {
+  padding-left: 3vw;
+  padding-top: .5vh;
+}
+#prelude li {
+  font-weight: bold;
+  position: relative;
+  list-style-type: none;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+#prelude li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #FE9298;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
+#prelude .wrapper .image-container {
+  flex-grow: 1;
+}
+#prelude .wrapper .image-container img {
+  width: 19vw;
+}
+#prelude .wrapper:hover img {
+  animation: lotos 2s ease-in-out;
+}
+@keyframes lotos {
+  20% {
+    transform: rotate(-30deg) rotateX(10deg);
+  }
+  50% {
+    transform: rotate(25deg) rotateX(-10deg);
+  }
+  80% {
+    transform: rotate(-10deg) rotateX(5deg);
+  }
+}
+
+#types .row {
+    padding: 0.75vw;
+
+    display: grid;
+    grid-template-columns: repeat(64, 1fr);
+    grid-template-rows: 43vh 50vh 46vh 40vh;
+    width: 90%;
+    grid-row-gap: 0.75vw;
+    margin: 0 1vw 4vh 1vw;
+}
+#types .box {
+  cursor: pointer;
+}
+#types .box__inner {
+    background-color: #005696;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 4vh 2vw;
+    font-family: fantasy;
+    font-size: 4.6vw;
+    color: #FFCED0;
+    background-color: #690308;
+    letter-spacing: .1em;
+    text-shadow:
+      -1px -1px 1px #FFAEB2,
+      1px 1px 1px #BF8285;
+    border: 3px solid #4A0004;
+    pointer-events: none;
+}
+#types .row .box:nth-of-type(1) {
+  grid-row: 1;
+}
+#types .row .box:nth-of-type(2) {
+  grid-row: 1;
+}
+#types .row .box:nth-of-type(3) {
+  grid-row: 2;
+}
+#types .row .box:nth-of-type(4) {
+  grid-row: 2;
+}
+#types .row .box:nth-of-type(5) {
+  grid-row: 3;
+}
+#types .row .box:nth-of-type(6) {
+  grid-row: 3;
+}
+#types .row .box:nth-of-type(7) {
+  grid-row: 4;
+}
+#types .row .box:nth-of-type(8) {
+  grid-row: 4;
+}
+#types .box-top-left {
+  clip-path: polygon(0 0, 98% 0, 83% 100%, 0 100%);
+  grid-column: 1 / span 35;
+
+}
+#types .box-top-right {
+  clip-path: polygon(17% 0, 100% 0, 100% 100%, 2% 100%);
+  grid-column: span 35 / -1;
+
+}
+#types .box-bottom-left {
+  clip-path: polygon(0 0, 83% 0, 98% 100%, 0 100%);
+  grid-column: 1 / span 35;
+
+}
+#types .box-bottom-right {
+  clip-path: polygon(2% 0, 100% 0, 100% 100%, 17% 100%);
+  grid-column: span 35 / -1;
+
+}
+#types .box-top-left .box__inner {
+  justify-content: flex-start;
+  text-align: left;
+  align-items: flex-start;
+  padding-right: 4vw;
+}
+#types .box-top-right .box__inner {
+  justify-content: flex-end;
+  text-align: right;
+  align-items: flex-end;
+  padding-left: 4vw;
+}
+#types .box-bottom-left .box__inner {
+  justify-content: flex-start;
+  text-align: left;
+  align-items: flex-end;
+  padding-right: 4vw;
+}
+#types .box-bottom-right .box__inner {
+  justify-content: flex-end;
+  text-align: right;
+  align-items: flex-start;
+  padding-left: 4vw;
+}
+#types .box:active {
+  background-color: black;
+}
+.notification {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: max-content;
+  background-color: #4A0004;
+  border-radius: 2vw;
+  border: 2px solid #300002;
+  font-size: 2vw;
+  padding: 2vh 2vw;
+  color: #FFCED0;
+}
+.notification h1 {
+  font-family: 'Ruslan Display';
+}
+.notification p {
+  padding: 2px;
+  font-weight: bold;
+  font-size: 90%;
+}
+@media screen and (max-width: 500px) {
+  .notification {
+    font-size: 1rem;
+  }
+  .notification h1 {
+    font-size: .9rem;
+  }
+}
