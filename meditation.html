@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медитация</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/meditation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/meditation.js"></script>
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="index.html">
+          <svg class="logo" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M0 0 0 80A1.5 1.3 0 000 0L7 12A1 1 0 017 72L7 12M74 0C60 6 59 53 60 80l9 0C72 13 86 13 94 80l9 0C104 53 103 6 88 0L74 0 73 19A1 1 0 0189 19L73 19M141 0A1 1.4 0 00141 80 1 1.4 0 00141 0L141 7A1 1.6 0 01141 61 1 1.6 0 01141 7"></path>
+              <clipPath id="smoke">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M171 66.8125C180.1125 82 189.225 82 198.3375 66.8125S202.8938 41.5 202.8938 26.3125 189.225 21.25 184.6687 21.25 180.1125 11.125 184.6687 6.0625L180.1125 1C175.5563 11.125 180.1125 16.1875 180.1125 21.25S189.225 21.25 193.7813 26.3125 198.3375 56.6875 196.0594 61.75C189.225 82 180.1125 76.9375 171 61.75Z">
+              </clipPath>
+              <path clip-path="url(#smoke)" class="path" fill="none" stroke="white" stroke-miterlimit="10" stroke-width="18" d="M171 66.8125C180.1125 82 189.225 82 198.3375 66.8125S202.8938 41.5 202.8938 26.3125 189.225 21.25 184.6687 21.25 180.1125 11.125 184.6687 6.0625L180.1125 1C175.5563 11.125 180.1125 16.1875 180.1125 21.25S189.225 21.25 193.7813 26.3125 198.3375 56.6875 196.0594 61.75C189.225 82 180.1125 76.9375 171 61.75Z"></path>
+            </g>
+          </svg>
+        </a>
+        <nav class="menu" id="menu">
+          <a href="meditation.html">Медитация</a>
+          <a href="yoga.html">Йога</a>
+          <a href="shop.html">Магазин</a>
+          <a href="contacts.html">О нас</a>
+        </nav>
+        <div class="dropdown-menu-container">
+          <div class="activator" id="activator"></div>
+          <nav class="dropdown-menu" id="dropdown-menu">
+            <a href="meditation.html">Медитация</a>
+            <a href="yoga.html">Йога</a>
+            <a href="shop.html">Магазин</a>
+            <a href="contacts.html">О нас</a>
+          </nav>
+        </div>
+    </header>
+    <figure class="loader">
+      <span></span><span></span>
+      <span></span><span></span>
+      <span></span><span></span>
+      <span></span><span></span>
+    </figure>
+    <section id="prelude">
+      <div class="content-container wrapper">
+        <div class="text-container">
+          <div class="text">
+            <h1>Медитация</h1>
+            <ul>
+              <li>Избавление от стресса</li>
+              <li>Уменьшение симптомов депрессии</li>
+              <li>Улучшение настроения</li>
+              <li>Контроль внимания</li>
+              <li>Целостное и здоровое ощущение себя</li>
+              <li>Помощь при бессоннице</li>
+            </ul>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://cdn-icons-png.flaticon.com/512/2982/2982182.png" alt="Изображение">
+        </div>
+      </div>
+    </section>
+    <section id="types">
+      <div class="row">
+          <div class="box box-top-left" data-h1="Тратака" data-p ="Тратака - это йогическое очищение (шаткарма) и тантрический метод медитации, который включает в себя пристальный взгляд на одну точку, такую как маленький предмет, черная точка или пламя свечи">
+              <div class="box__inner">тратака</div>
+          </div>
+          <div class="box box-top-right" data-h1="Медитация осознавания" data-p ="Медитация осознанности — это практика ментального тренинга, которая учит замедлять ход мыслей, отпускать негатив, успокаивать разум и тело. Она сочетает в себе медитацию с практикой осознанности, которую можно определить как психическое состояние, предполагающее полное сосредоточение на «настоящем моменте», чтобы вы могли принять свои мысли, чувства и ощущения без осуждения. Техники могут быть разными, но в целом, медитация осознанности включает в себя глубокое дыхание и осознание тела и разума.">
+              <div class="box__inner">медитация осознавания</div>
+          </div>
+          <div class="box box-bottom-left" data-h1="Метта медитация" data-p ='"Метта-медитация — практика добро-пожелания всему живому вокруг. В своих истоках эта практика восходит к философии ахимсы, которая предполагает такое состояние мира, в котором каждое живое существо свободно от какой-либо агрессии или недоброжелательности по отношению к себе и другим. Это состояние гармоничного общества, где на уровне мыслей, слов и действий каждый относится к другим как к самому себе."'>
+              <div class="box__inner">метта медитация</div>
+          </div>
+          <div class="box box-bottom-right" data-h1="Медитация на объект" data-p ='"Чтобы преодолеть нашу тенденцию постоянно выдумывать что-то, будды учили нас полагаться на опору. Привыкая к такой опоре, мы стабилизируем своё внимание."'>
+              <div class="box__inner">медитация на объект</div>
+          </div>
+          <div class="box box-top-left" data-h1="Медитация на Идеал" data-p ="В каждом из нас есть скрытый потенциал, и есть некоторые знания о себе более совершенном. Как правило, это интуитивное знание или ощущение, которое порой сложно описать словами, это нечто глубинное, внутреннее. Знание о том, что это есть, не ведет нас к быстрому раскрытию скрытых потенциалов, но приоткрывает двери в себя неизведанного, нового, потенциально более эволюционного.">
+              <div class="box__inner">медитация на Идеал</div>
+          </div>
+
+          <div class="box box-top-right" data-h1="Медитация на дыхание" data-p ="Осознанное дыхание – это очень простая, но мощная практика медитации осознанности. Необходимо сосредоточить внимание на дыхании – на его естественном ритме и потоке, а также на ощущениях при каждом вдохе и выдохе.">
+              <div class="box__inner">медитация на дыхание</div>
+          </div>
+
+          <div class="box box-bottom-left" data-h1="Мантра-медитация" data-p ="Мантра-медитация становится все более популярной в последние годы. Практика состоит из двух частей - повторения мантр и медитации - и имеет свою цель для каждого человека. Мантра-медитация требует постоянной практики, но проста и ведёт ко многим положительным изменениям в жизни.">
+              <div class="box__inner">мантра-медитация</div>
+          </div>
+          <div class="box box-bottom-right" data-h1="Трансцендентальная медитация" data-p='"Практика ТМ — это динамичный процесс, характеризуемый: (а) перемещением внимания с активного, поверхностного уровня мышления и восприятия на более спокойные и абстрактные уровни мысли; (б) трансцендированием тончайшего уровня мышления с переходом к состоянию полного само-осознания... и (в) переходом внимания назад – к более активным уровням мышления. Эти три фазы, отличающиеся по физиологическим характеристикам, циклично повторяются множество раз в каждой сессии ТМ и определяют состояние "спокойной осознанности" – глубокого физиологического отдыха и растущей пробужденности ума. Это состояние спокойной осознанности снимает умственный и физический стресс."'>
+              <div class="box__inner">ТМ</div>
+          </div>
+      </div>
+      <div class="notification">
+        <h1></h1>
+        <p></p>
+      </div>
+    </section>
+  <footer>
+    <div class="row">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    </div>
+
+    <div class="row">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contacts.html">Contact us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="row">DAOS Copyright © 2022 DAOS - All rights reserved</div>
+  </footer>
+</body>
+</html>
